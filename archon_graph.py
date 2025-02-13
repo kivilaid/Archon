@@ -34,7 +34,7 @@ reasoner = Agent(
     system_prompt='You are an expert at coding AI agents with Pydantic AI and defining the scope for doing so.',  
 )
 
-primary_llm_model = os.getenv('PRIMARY_MODEL', 'gpt-4o-mini')
+primary_llm_model = os.getenv('PRIMARY_MODEL', 'gpt-4o')
 router_agent = Agent(  
     OpenAIModel(primary_llm_model, base_url=base_url, api_key=api_key),
     system_prompt='Your job is to route the user message either to the end of the conversation or to continue coding the AI agent.',  
